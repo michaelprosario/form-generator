@@ -1,1 +1,15 @@
-{{ elementData.label }}
+
+<div class="md-form">   
+  {{elementData.label}}
+  <span *ngIf="elementData.required" class="spnRequired">*</span>
+  <div class="divGuideText" *ngIf="elementData.guideText.length > 0">
+    {{elementData.guideText}}
+  </div>
+  <input 
+    type="{{elementData.inputType}}" 
+    id="{{elementData.name}}" 
+    class="form-control"
+    placeholder="{{elementData.placeHolder}}"
+    value="{{elementData.value}}"
+    />  
+</div>

@@ -17,33 +17,19 @@ export class AppComponent {
     this.form.description = "This is a test form";
     this.form.name = "My test form";
 
-    let firstNameField = new InputElement();
-    firstNameField.formGroupOrder = 1;
-    firstNameField.guideText = "Please enter your first name";
-    firstNameField.label = "First name";
-    firstNameField.placeHolderText = "First name goes here";
-    firstNameField.required = true;
-    firstNameField.value = "";
-    this.form.formElements.push(firstNameField);
+    let things = "firstName|lastName|email|phone|phone2"
+    let thingsList = things.split('|');
 
-    let lastNameField = new InputElement();
-    lastNameField.formGroupOrder = 1;
-    lastNameField.guideText = "Please enter your last name";
-    lastNameField.label = "Last name";
-    lastNameField.placeHolderText = "Last name goes here";
-    lastNameField.required = true;
-    lastNameField.value = "";
-    this.form.formElements.push(lastNameField);
+    for(var thing of thingsList){
+      this.form.formElements.push(new InputElement({ 
+        formGroupOrder: 1,                 
+        label: thing,         
+        required: true, 
+        value: "",        
+        name: thing 
+      }));  
+    }
 
-    let emailField = new InputElement({ 
-      formGroupOrder: 1, 
-      guideText: "Please enter your email", 
-      label: "Email", 
-      placeHolderText: "Email", 
-      required: true, 
-      value: "" 
-    });
-    this.form.formElements.push(emailField);
 
   }
 }

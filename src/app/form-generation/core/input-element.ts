@@ -2,10 +2,11 @@ import { BaseElement, FormElementType } from "./base-element";
 
 export class InputElement extends BaseElement
 {
-  public placeHolderText: string = "";
+  public placeHolder: string = "";
   public value: string  = "";
   public label: string = "";
   public required: boolean = false;
+  public inputType: string = "text";
   
   public constructor(init?:Partial<InputElement>)
   {
