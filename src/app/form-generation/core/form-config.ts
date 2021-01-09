@@ -1,6 +1,6 @@
 import { BaseElement } from "./base-element";
 
-export class Form
+export class FormConfig
 {
   public name: string = "";
   public description: string = "";

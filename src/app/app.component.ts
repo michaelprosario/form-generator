@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Form } from './form-generation/core/form';
+import { FormConfig } from './form-generation/core/form-config';
 import { InputElement } from './form-generation/core/input-element';
 
 @Component({
@@ -9,19 +9,25 @@ import { InputElement } from './form-generation/core/input-element';
 })
 export class AppComponent {
   title = 'form-generator';
-  form: Form;
+  formConfig: FormConfig;
+  testPerson: any;
 
   ngOnInit(){
+    let person: any = {};
+    person.firstName = "Michael";
+    person.lastName = "Peter";
+    person.email = "michael@here.com";
+    this.testPerson = person;
+    
+    this.formConfig = new FormConfig();
+    this.formConfig.description = "This is a test form";
+    this.formConfig.name = "My test form";
 
-    this.form = new Form();
-    this.form.description = "This is a test form";
-    this.form.name = "My test form";
-
-    let things = "firstName|lastName|email|phone|phone2"
+    let things = "firstName|lastName|email"
     let thingsList = things.split('|');
 
     for(var thing of thingsList){
-      this.form.formElements.push(new InputElement({ 
+      this.formConfig.formElements.push(new InputElement({ 
         formGroupOrder: 1,                 
         label: thing,         
         required: true, 
@@ -29,7 +35,9 @@ export class AppComponent {
         name: thing 
       }));  
     }
-
-
   }
+
+  onClick() {
+    console.log(this.testPerson);
+  }  
 }

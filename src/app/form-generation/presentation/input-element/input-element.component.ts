@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { InputElement } from '../../core/input-element';
 
 @Component({
   selector: 'app-input-element',
@@ -7,10 +8,11 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class InputElementComponent implements OnInit {
 
-  @Input('elementData') elementData;
+  @Input('elementData') elementData: InputElement;
+  @Input('dataObject') dataObject: any;
   constructor() { }
  
   ngOnInit(): void {
+    console.log(this.dataObject);
   }
-
 }

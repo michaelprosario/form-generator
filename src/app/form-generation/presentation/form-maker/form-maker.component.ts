@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Form } from '../../core/form';
-import { InputElement } from '../../core/input-element';
+import { FormConfig } from '../../core/form-config';
 
 @Component({
   selector: 'app-form-maker',
@@ -9,12 +8,12 @@ import { InputElement } from '../../core/input-element';
 })
 export class FormMakerComponent implements OnInit {
 
-  @Input('form') form: Form;
+  @Input('formConfig') formConfig: FormConfig;
+  @Input('dataObject') dataObject: any;
 
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.form);
+    console.log(this.formConfig);
   }
-
 }

@@ -6,7 +6,7 @@ import { FormMakerComponent } from './form-generation/presentation/form-maker/fo
 import { InputElementComponent } from './form-generation/presentation/input-element/input-element.component';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { NgModule } from '@angular/core';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,6 +18,7 @@ import { ReactiveFormsModule } from '@angular/forms';
   imports: [    
     AppRoutingModule, 
     BrowserModule,
+    FormsModule,
     MDBBootstrapModule.forRoot(),
     ReactiveFormsModule, 
   ],

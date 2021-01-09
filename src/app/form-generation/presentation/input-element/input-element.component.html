@@ -10,6 +10,6 @@
     id="{{elementData.name}}" 
     class="form-control"
     placeholder="{{elementData.placeHolder}}"
-    value="{{elementData.value}}"
+    [(ngModel)] = "dataObject === undefined ? '' : dataObject[elementData.name]"
     />  
 </div>

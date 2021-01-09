@@ -5,9 +5,17 @@
 </head>
 
 <body>
+
   <div class="container">
-    <app-form-maker [form]="form"></app-form-maker>
+    <app-form-maker 
+      [formConfig]="formConfig" 
+      [dataObject]="testPerson"
+      >
+    </app-form-maker>
   </div>
+
+  <button (click)="onClick()">Testing 123</button>
+
 </body>
 
 </html>

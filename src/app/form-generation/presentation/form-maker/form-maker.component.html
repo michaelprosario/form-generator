@@ -1,8 +1,10 @@
-  <h1>{{form.name}}</h1>
-  {{ form.description }}
-
-
-  <div *ngFor="let formElement of form.formElements">
-    <app-input-element [elementData]="formElement"></app-input-element>
+  <div class="divFormName">{{formConfig.name}}</div>
+  <div class="divFormDescription">
+    {{ formConfig.description }}
   </div>
-
+  <div *ngFor="let formElement of formConfig.formElements">
+    <app-input-element 
+      [elementData]="formElement" 
+      [dataObject]="dataObject">
+    </app-input-element>
+  </div>
