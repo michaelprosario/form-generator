@@ -5,7 +5,7 @@ export enum FormElementType{
 
 export class BaseElement {
   public elementType: FormElementType; 
-  public enabled: boolean;
+  public enabled: boolean = true;
   public formGroupOrder: number = 0;
   public guideText: string = "";
   public name: string = "";

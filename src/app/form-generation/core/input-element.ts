@@ -1,4 +1,4 @@
-import { BaseElement } from "./base-element";
+import { BaseElement, FormElementType } from "./base-element";
 
 export class InputElement extends BaseElement
 {
@@ -6,4 +6,11 @@ export class InputElement extends BaseElement
   public value: string  = "";
   public label: string = "";
   public required: boolean = false;
+  
+  public constructor(init?:Partial<InputElement>)
+  {
+    super();
+    this.elementType = FormElementType.Input;
+    Object.assign(this, init);    
+  }
 }
