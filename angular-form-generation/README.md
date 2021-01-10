@@ -35,5 +35,6 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 - https://www.tsmean.com/articles/how-to-write-a-typescript-library/local-consumer/
 - https://www.tsmean.com/articles/how-to-write-a-typescript-library/
 - https://www.tsmean.com/articles/how-to-write-a-typescript-library/unit-testing/
+- https://basarat.gitbook.io/typescript/intro-1/jest
 
 
