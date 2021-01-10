@@ -17,13 +17,14 @@ export class AppComponent {
     person.firstName = "Michael";
     person.lastName = "Peter";
     person.email = "michael@here.com";
+    person.phone = "fdafd";
     this.testPerson = person;
     
     this.formConfig = new FormConfig();
     this.formConfig.description = "This is a test form";
     this.formConfig.name = "My test form";
-
-    let things = "firstName|lastName|email"
+    
+    let things = "firstName|lastName|email|phone"
     let thingsList = things.split('|');
 
     for(var thing of thingsList){
@@ -32,7 +33,8 @@ export class AppComponent {
         label: thing,         
         required: true, 
         value: "",        
-        name: thing 
+        name: thing,
+        maxLength: 50
       }));  
     }
   }

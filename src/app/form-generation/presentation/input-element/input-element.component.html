@@ -6,10 +6,11 @@
     {{elementData.guideText}}
   </div>
   <input 
-    type="{{elementData.inputType}}" 
-    id="{{elementData.name}}" 
-    class="form-control"
-    placeholder="{{elementData.placeHolder}}"
     [(ngModel)] = "dataObject === undefined ? '' : dataObject[elementData.name]"
+    class="form-control"
+    id="{{elementData.name}}" 
+    maxlength="{{elementData.maxLength}}"
+    placeholder="{{elementData.placeHolder}}"
+    type="{{elementData.inputType}}" 
     />  
 </div>
