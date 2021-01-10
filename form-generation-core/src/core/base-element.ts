@@ -8,7 +8,8 @@ export class BaseElement {
   public enabled: boolean = true;
   public formGroupOrder: number = 0;
   public guideText: string = "";
+  public hidden: boolean = false;
+  public label: string = "";
   public name: string = "";
   public required: boolean = false;
-  public hidden: boolean = false;
 }

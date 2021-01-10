@@ -2,8 +2,7 @@ import { BaseElement, FormElementType } from "./base-element";
 
 export class InputElement extends BaseElement
 {
-  public inputType: string = "text";
-  public label: string = "";
+  public inputType: string = "text";  
   public maxLength: number = 5000;
   public placeHolder: string = "";
   public required: boolean = false;
