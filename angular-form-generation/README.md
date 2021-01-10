@@ -25,3 +25,15 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## How do you connect to form-generation-core?
+- Navigate to repository root
+- cd angular-form-generation
+- npm link ../form-generation-core
+
+## References
+- https://www.tsmean.com/articles/how-to-write-a-typescript-library/local-consumer/
+- https://www.tsmean.com/articles/how-to-write-a-typescript-library/
+- https://www.tsmean.com/articles/how-to-write-a-typescript-library/unit-testing/
+
+
