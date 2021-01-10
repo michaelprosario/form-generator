@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { InputElement } from '../../core/input-element';
+import { InputElement } from 'form-generation-core';
 
 @Component({
   selector: 'app-input-element',

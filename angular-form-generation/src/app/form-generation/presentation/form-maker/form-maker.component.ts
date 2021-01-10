@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { FormConfig } from '../../core/form-config';
+import { FormConfig } from 'form-generation-core';
 
 @Component({
   selector: 'app-form-maker',

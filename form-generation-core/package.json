@@ -1,0 +1,7 @@
+{
+  "name": "form-generation-core",
+  "version": "1.0.0",
+  "description": "Core logic used generate dynamic forms using schema data",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts"
+}

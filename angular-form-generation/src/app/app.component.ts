@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { FormConfig } from './form-generation/core/form-config';
-import { InputElement } from './form-generation/core/input-element';
+import { FormConfig } from 'form-generation-core';
+import { InputElement } from 'form-generation-core';
 
 @Component({
   selector: 'app-root',
