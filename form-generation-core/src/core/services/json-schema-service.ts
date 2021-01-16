@@ -2,9 +2,12 @@ import { BaseElement } from "../value-objects/base-element";
 import { FormConfig } from "../value-objects/form-config";
 import { IJsonSchema, IJsonSchemaProperty } from "../interfaces/json-schema";
 import { InputElement } from "../value-objects/input-element";
+import { Require } from "../utilities/require";
 
 export class MakeFormCommand {
-    public jsonSchema: IJsonSchema;
+    constructor(public jsonSchema: IJsonSchema){
+        Require.objectNotNull(jsonSchema, "jsonSchema is not null");
+    }
 }
 
 export class MakeFormResponse {
@@ -15,6 +18,8 @@ export class MakeFormResponse {
 
 export class JsonSchemaService {
     public makeForm(command: MakeFormCommand): MakeFormResponse {
+        Require.objectNotNull(command, "command is not null");
+
         let response = new MakeFormResponse();
 
         let formConfig = new FormConfig();

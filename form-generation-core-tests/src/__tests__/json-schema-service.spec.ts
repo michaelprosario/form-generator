@@ -102,15 +102,26 @@ describe('Json Schema service', () => {
     // arrange
     let schema = getSimpleSchema();
     let service = new JsonSchemaService();
-    let command = new MakeFormCommand();
-    command.jsonSchema = schema;
+    let command = new MakeFormCommand(schema);
 
     // act 
     const response = service.makeForm(command);
 
     // assert   
     expect(response.formConfig.formElements.length).toBe(6);
+  })
 
+  it('should handle simple schema input', () => {
+    // arrange
+    let schema = getSimpleSchema();
+    let service = new JsonSchemaService();
+    let command = new MakeFormCommand(schema);
+
+    // act 
+    const response = service.makeForm(command);
+
+    // assert   
+    expect(response.formConfig.formElements.length).toBe(6);
   })
 
 });
