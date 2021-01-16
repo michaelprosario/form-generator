@@ -34,12 +34,12 @@
               "node_modules/@fortawesome/fontawesome-free/scss/brands.scss",
               "node_modules/angular-bootstrap-md/assets/scss/bootstrap/bootstrap.scss",
               "node_modules/angular-bootstrap-md/assets/scss/mdb.scss",
-              "node_modules/animate.css/animate.css",                            
+              "node_modules/animate.css/animate.css",
               "src/styles.scss"
             ],
             "scripts": [
               "node_modules/chart.js/dist/Chart.js",
-              "node_modules/hammerjs/hammer.min.js"              
+              "node_modules/hammerjs/hammer.min.js"
             ]
           },
           "configurations": {
@@ -133,6 +133,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "form-generator"
+    }
+  },
+  "defaultProject": "form-generator",
+  "cli": {
+    "analytics": "c1a0698f-3bf6-45f5-8883-7f6b22bd8768"
+  }
 }
