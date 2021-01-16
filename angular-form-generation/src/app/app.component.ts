@@ -12,9 +12,30 @@ import { getSimpleSchema } from './get-simple-schema';
 export class AppComponent {
   title = 'form-generator';
   formConfig: FormConfig;
-  testPerson: any;
+  testObject: any;
 
   ngOnInit(){
+    this.testObject = {};
+    this.testObject.thing1 = "foo";
+    this.testObject.thing2 = "bar";
+
+    this.formConfig = new FormConfig();
+    this.formConfig.name = "Demo Form 1";
+
+    let input1 = new InputElement();
+    input1.label = "Thing 1";
+    input1.name = "thing1";
+    this.formConfig.formElements.push(input1);
+
+    let input2 = new InputElement();
+    input2.label = "Thing 2";
+    input2.name = "thing2";
+    input2.textArea = true;
+    this.formConfig.formElements.push(input2);
+
+  }
+
+  private demo1() {
     let service = new JsonSchemaService();
     let command = new MakeFormCommand(getSimpleSchema());
     let response = service.makeForm(command);
@@ -23,6 +44,6 @@ export class AppComponent {
   }
 
   onClick() {
-    console.log(this.testPerson);
+    console.log(this.testObject);
   }
 }

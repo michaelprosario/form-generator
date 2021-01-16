@@ -1,16 +1,27 @@
 
-<div class="md-form">   
+<div class="md-form">
   {{elementData.label}}
   <span *ngIf="elementData.required" class="spnRequired">*</span>
   <div class="divGuideText" *ngIf="elementData.guideText.length > 0">
     {{elementData.guideText}}
   </div>
-  <input 
+  <input
     [(ngModel)] = "dataObject === undefined ? '' : dataObject[elementData.name]"
     class="form-control"
-    id="{{elementData.name}}" 
+    id="{{elementData.name}}"
     maxlength="{{elementData.maxLength}}"
     placeholder="{{elementData.placeHolder}}"
-    type="{{elementData.inputType}}" 
-    />  
+    type="{{elementData.inputType}}"
+    *ngIf="!elementData.textArea"
+    />
+    <textarea
+      [(ngModel)] = "dataObject === undefined ? '' : dataObject[elementData.name]"
+      class="form-control"
+      id="{{elementData.name}}"
+      maxlength="{{elementData.maxLength}}"
+      *ngIf="elementData.textArea"
+      ows="4"
+    >
+
+    </textarea>
 </div>

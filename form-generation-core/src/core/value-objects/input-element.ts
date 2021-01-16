@@ -7,6 +7,7 @@ export class InputElement extends BaseElement
   public placeHolder: string = "";
   public required: boolean = false;
   public value: string  = "";
+  public textArea: boolean = false;
   
   public constructor(init?:Partial<InputElement>)
   {
